@@ -55,11 +55,11 @@ The project used the data in **Shanghai** from Airbnb's website to explore the f
 * Data prediction - random forest
 * Model diagnostics
 
-The project is organized as follows. Section I describes the Airbnb raw data set in Shanghai, Section II indicates how to clean the raw data set, Section III shows the correlations between price and other available variables through visualization, Section IV presents the price prediction using random forest model, and Section V concludes.
+The project is organized as follows. Section 2 describes the Airbnb raw data set in Shanghai, Section 3 indicates how to clean the raw data set, Section 4 shows the correlations between price and other available variables through visualization, Section 5 presents the price prediction using random forest model.
 
 \newpage
 
-# I. Raw Data Description
+# Raw Data Description
 
 The data for this project is from [**Airbnb website**](http://insideairbnb.com/get-the-data.html).[^1] And I choose Shanghai as the subject of my analysis since I am more familiar with the regional distribution of Shanghai and the usual prices of apartment hotels, etc. in China, this helps me explore the interpretation of the results of the subsequent analysis.
 
@@ -98,7 +98,7 @@ So in the next section, I will detail how I clean the raw data.
 
 \newpage
 
-# II. Process of Cleaning Data
+# Process of Cleaning Data
 
 The following are the steps I took with the raw data:
 
@@ -135,7 +135,7 @@ In the next section, I will use clean data set to process data visualizations wh
 
 \newpage
 
-# III. Data Visulization
+# Data Visulization
 
 First, let us look at the distributions of price, Figure 1[^5].
 
@@ -242,13 +242,13 @@ This figure provides a lot of useful information. First, we can see the differen
 
 This figure is my favorite. And I would like to explain what each step does in the codes:
 
-* a) Initialize a new ggplot object, specifying the data to use and the mapping of variables to aesthetics. In this case, the x aesthetic is mapped to longitude, the y aesthetic is mapped to latitude, the color aesthetic is mapped to price, and the shape aesthetic is mapped to f_neighbourhood_cleansed.
-* b) Add a geom_point layer to the plot, which creates a scatterplot of the longitude and latitude coordinates, with the point size set to 3.
-* c) Set the color scale for the price variable to a gradient from blue to red.
-* d) Manually set the shape scale for the f_neighbourhood_cleansed variable to a vector of integers ranging from 1 to 25.
-* e) Apply the theme_minimal theme to the plot, which removes all background elements except the data and axis labels.
-* f) Add a legend for the shape aesthetic, with the title "Neighbourhood".
-* g) Set the size of the legend keys to 0.3 cm using the theme function.
+* Initialize a new ggplot object, specifying the data to use and the mapping of variables to aesthetics. In this case, the x aesthetic is mapped to longitude, the y aesthetic is mapped to latitude, the color aesthetic is mapped to price, and the shape aesthetic is mapped to f_neighbourhood_cleansed.
+* Add a geom_point layer to the plot, which creates a scatterplot of the longitude and latitude coordinates, with the point size set to 3.
+* Set the color scale for the price variable to a gradient from blue to red.
+* Manually set the shape scale for the f_neighbourhood_cleansed variable to a vector of integers ranging from 1 to 25.
+* Apply the theme_minimal theme to the plot, which removes all background elements except the data and axis labels.
+* Add a legend for the shape aesthetic, with the title "Neighbourhood".
+* Set the size of the legend keys to 0.3 cm using the theme function.
 
 Thanks to the longitude and latitude variables in the data, I am able to draw the distribution of price in the form of a map. First, we can see the general distribution of apartments and houses, which are basically concentrated in the center of Shanghai. Second, the overall darker color of prices in ChongmingDistrict in the upper right corner is consistent with our conclusion above.
 
